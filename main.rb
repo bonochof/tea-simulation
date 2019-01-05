@@ -40,7 +40,7 @@ Window.load_resources do
       Window.draw_font(10 + i * 130, 140, "Te: #{$te[i]}[`C]", font)
       Window.draw_font(10 + i * 130, 180, "k: #{$k[i].round(2)}", font)
       Window.draw_font(10 + i * 130, 220, "#{temp.round(1)}[`C]", font)
-      Window.draw_font(10 + i * 130, 260, "t: #{$t[i].round}[m]", font) if $t[i] != 0
+      Window.draw_font(10 + i * 130, 260, "tt: #{$t[i].round(1)}[m]", font) if $t[i] != 0
     end
 
     Window.draw_font(460, 440, "#{m.round}[m]".rjust(8), font)

@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset= "utf-8" />
-    <title>DXOpal game</title>
+    <title>シミュレーション課題</title>
     <script type="text/javascript" src="dxopal.min.js"></script>
     <script type="text/ruby">
       DXOpal.dump_error{ require_remote 'main.rb' }
@@ -25,7 +25,10 @@
     <tr><td>To</td><td>初期温度(乱数)</td></tr>
     <tr><td>Te</td><td>環境温度(室内温度は20[`C]と仮定)</td></tr>
     <tr><td>k</td><td>定数(液体に依存する)</td></tr>
-    <tr><td>t</td><td>飲みやすい温度(40[`C]と仮定)になった時間</td></tr>
+    <tr><td>tt</td><td>飲みやすい温度(40[`C]と仮定)になった時刻(分)</td></tr>
     </table></div>
+    <div><p>用いた物理式</p>
+    <p>T = (To - Te) * e^(-kt) + Te<br>
+    <a href="http://www7b.biglobe.ne.jp/~math-tota/su2/hotwater.htm" target="_blank">参考</a></p></div>
   </body>
 </html>
