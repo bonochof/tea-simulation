@@ -32,7 +32,7 @@ Window.load_resources do
     m = $s / 60
     5.times do |i|
       temp = ($to[i] - $te[i]) * $k[i]**m + $te[i]
-      $t[i] = m if $t[i] == 0 and temp < 30
+      $t[i] = m if $t[i] == 0 and temp < 40
       id = temp / 40
       Window.draw_scale(pos[i], 30, Image[img[id]], 0.2, 0.2)
       Window.draw_font(10 + i * 130, 30, "Tea#{i}", font)

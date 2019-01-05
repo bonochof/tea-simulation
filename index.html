@@ -10,7 +10,22 @@
   </head>
 
   <body>
+    <div><h2>お茶シミュレータ</h2>7061-0503 高田亮介</div>
     <canvas id="dxopal-canvas"></canvas>
     <div id="dxopal-errors"></div>
+    <div><table border=1>
+    <caption>操作説明</caption>
+    <tr><th>Key</th><th>操作</th></tr>
+    <tr><td>Enter</td><td>時刻リセット</td></tr>
+    <tr><td>Space</td><td>乱数変更</td></tr>
+    </table></div>
+    <div><table border=1>
+    <caption>パラメータ説明</caption>
+    <tr><th>Parameter</th><th>内容</th></tr>
+    <tr><td>To</td><td>初期温度(乱数)</td></tr>
+    <tr><td>Te</td><td>環境温度(室内温度は20[`C]と仮定)</td></tr>
+    <tr><td>k</td><td>定数(液体に依存する)</td></tr>
+    <tr><td>t</td><td>飲みやすい温度(40[`C]と仮定)になった時間</td></tr>
+    </table></div>
   </body>
 </html>
