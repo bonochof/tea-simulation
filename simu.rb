@@ -1,6 +1,6 @@
 require 'dxruby'
 
-t = 0
+s = 0
 k = []
 To = []
 Te = []
@@ -18,12 +18,13 @@ font = Font.new(32)
 
 Window.loop do
   break if Input.key_push?(K_ESCAPE)
-  t = 0 if Input.key_push?(K_RETURN)
+  s = 0 if Input.key_push?(K_RETURN)
   
+  m = s / 60
   5.times do |i|
-    temp = (To[i] - Te[i]) * k[i]**t + Te[i]
-    if    temp > 80 then id = 0
-    elsif temp > 40 then id = 1
+    temp = (To[i] - Te[i]) * k[i]**m + Te[i]
+    if    temp > 80.0 then id = 0
+    elsif temp > 40.0 then id = 1
     else                 id = 2
     end
     Window.draw_scale(pos[i], 30, img[id], 0.2, 0.2)
@@ -34,5 +35,7 @@ Window.loop do
     Window.draw_font(10 + i * 130, 220, "#{temp.round(1)}['C]", font)
   end
   
-  t += 1
+  Window.draw_font(400, 440, "#{m}[m]".rjust(8), font)
+  Window.draw_font(540, 440, "#{s%60}[s]".rjust(5), font)
+  s += 1
 end
